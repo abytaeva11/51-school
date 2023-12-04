@@ -60,30 +60,32 @@ function Thursday({disableAudioDays, setDisableAudioDays}) {
     return savedInputs
       ? JSON.parse(savedInputs)
       : {
-          input1: "08:30",
-          input2: "09:15",
-          input3: "09:20",
-          input4: "10:05",
-          input5: "10:10",
-          input6: "10:55",
-          input7: "11:05",
-          input8: "11:50",
-          input9: "11:55",
-          input10: "12:40",
-          input11: "12:45",
-          input12: "13:30",
-          input13: "13:35",
-          input14: "14:20",
-          input15: "14:25",
-          input16: "15:10",
-          input17: "15:20",
-          input18: "16:05",
-          input19: "16:10",
-          input20: "16:55",
-          input21: "17:00",
-          input22: "17:45",
-          input23: "17:50",
-          input24: "18:35",
+          input1: "08:00",
+          input2: "08:45",
+          input3: "08:50",
+          input4: "09:35",
+          input5: "09:40",
+          input6: "10:25",
+          input7: "10:30",
+          input8: "11:15",
+          input9: "11:20",
+          input10: "12:05",
+          input11: "12:10",
+          input12: "12:55",
+          input13: "13:00",
+          input14: "13:45",
+          input15: "14:00",
+          input16: "14:45",
+          input17: "14:50",
+          input18: "15:35",
+          input19: "15:40",
+          input20: "16:25",
+          input21: "16:30",
+          input22: "17:15",
+          input23: "17:20",
+          input24: "18:05",
+          input25: "18:10",
+          input26: "18:50",
         };
   });
 
@@ -238,6 +240,21 @@ function Thursday({disableAudioDays, setDisableAudioDays}) {
                       onChange={(e) => handleInputChange("input12", e)}
                     />
                   </div>
+                  <div className="grid">
+                    <input
+                        type="time"
+                        defaultValue={thursdayInputs.input13}
+                        onFocus={() => handleInputFocus(12)}
+                        onChange={(e) => handleInputChange("input13", e)}
+                    />
+                    <input
+                        type="time"
+                        defaultValue={thursdayInputs.input14}
+                        onFocus={() => handleInputFocus(13)}
+                        onChange={(e) => handleInputChange("input14", e)}
+                    />
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -252,20 +269,6 @@ function Thursday({disableAudioDays, setDisableAudioDays}) {
               </h3>
               <div className="parentGrid">
                 <div className="">
-                  <div className="grid">
-                    <input
-                      type="time"
-                      defaultValue={thursdayInputs.input13}
-                      onFocus={() => handleInputFocus(12)}
-                      onChange={(e) => handleInputChange("input13", e)}
-                    />
-                    <input
-                      type="time"
-                      defaultValue={thursdayInputs.input14}
-                      onFocus={() => handleInputFocus(13)}
-                      onChange={(e) => handleInputChange("input14", e)}
-                    />
-                  </div>
                   <div className="grid">
                     <input
                       type="time"
@@ -336,6 +339,20 @@ function Thursday({disableAudioDays, setDisableAudioDays}) {
                       defaultValue={thursdayInputs.input24}
                       onFocus={() => handleInputFocus(23)}
                       onChange={(e) => handleInputChange("input24", e)}
+                    />
+                  </div>
+                  <div className="grid">
+                    <input
+                        type="time"
+                        defaultValue={thursdayInputs.input25}
+                        onFocus={() => handleInputFocus(24)}
+                        onChange={(e) => handleInputChange("input25", e)}
+                    />
+                    <input
+                        type="time"
+                        defaultValue={thursdayInputs.input26}
+                        onFocus={() => handleInputFocus(25)}
+                        onChange={(e) => handleInputChange("input26", e)}
                     />
                   </div>
                 </div>

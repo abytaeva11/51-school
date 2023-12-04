@@ -61,17 +61,18 @@ import VideoBg from '../global/VideoBg';
               </Routes>
             </div>
             <div>
-              {/*<img*/}
-              {/*  style={{*/}
-              {/*    borderRadius: "50%",*/}
-              {/*    width: "250px",*/}
-              {/*    height: "250px",*/}
-              {/*  }}*/}
-              {/*  src="https://35.edubish.kg/wp-content/uploads/sites/20/2023/03/whatsapp-image-2023-03-09-at-11.55.20-3-250x248.jpeg"*/}
-              {/*  alt=""*/}
-              {/*/>*/}
+              <img
+                style={{
+                  borderRadius: "50%",
+                  width: "250px",
+                  height: "250px",
+                }}
+                src="https://51.edubish.kg/wp-content/uploads/sites/25/2018/10/20181013_220939-250x245.jpg"
+                alt=""
+              />
               {/*<div className="school-name">*/}
-                <h3 className="school-name">Паяз атындагы <br/> №9   жалпы билим берүү мектеби</h3>
+              {/*  <h3 className="school-name">Паяз атындагы <br/> №9   жалпы билим берүү мектеби</h3>*/}
+
 
             </div>
           </div>

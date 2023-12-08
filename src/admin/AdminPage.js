@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import Week from '../Voice/Week';
 import Monday from '../components/Monday';
-import Tuesday from '../components/Thuesday'; // Исправлено название компонента
+import Tuesday from '../components/Thuesday'; 
 import Wednesday from '../components/Wednesday';
 import Thursday from '../components/Thursday';
 import Friday from '../components/Friday';

@@ -1,57 +1,74 @@
 import React, { useState, useEffect } from 'react';
-
 import muz4 from "../music/гимн-кр.mp3";
 
 const Gimn = () => {
   const [isNationalAnthemPlaying, setNationalAnthemPlaying] = useState(false);
 
-  useEffect(() => {
-    const currentDate = new Date();
-    const targetTime = new Date(currentDate);
-    targetTime.setHours(8,2,0);
+  const playNationalAnthem = () => {
+    try {
+      setNationalAnthemPlaying(true);
+      const audio = new Audio(muz4);
 
+      audio.onplay = () => {
+        console.log('Гимн воспроизведен');
+      };
 
-    let timeUntilNextAnthem = targetTime - currentDate;
-    if (timeUntilNextAnthem < 0) {
-      timeUntilNextAnthem += 24 * 60 * 60 * 1000; 
+      audio.onerror = (error) => {
+        console.error('Ошибка воспроизведения: ', error);
+        setNationalAnthemPlaying(false);
+      };
+
+      audio.onended = () => {
+        setNationalAnthemPlaying(false);
+      };
+
+      audio.play();
+    } catch (error) {
+      console.error('Ошибка воспроизведения: ', error);
+      setNationalAnthemPlaying(false);
     }
+  };
 
-    const timerId = setTimeout(() => {
-      playNationalAnthem();
-    }, timeUntilNextAnthem);
+  const scheduleNationalAnthem = () => {
+    const currentDate = new Date();
+    const dayOfWeek = currentDate.getDay(); 
 
-    return () => {
-      clearTimeout(timerId);
-    };
+    if (dayOfWeek === 1 || dayOfWeek === 5) {
+      const targetTime = new Date(currentDate);
+      targetTime.setHours(8, 2, 0); 
+
+      const timeUntilPlay = targetTime - currentDate;
+
+      if (timeUntilPlay > 0) {
+        setTimeout(() => {
+          playNationalAnthem();
+        }, timeUntilPlay);
+      }
+    }
+  };
+
+  useEffect(() => {
+    scheduleNationalAnthem();
   }, []);
 
-  const playNationalAnthem = () => {
-  setNationalAnthemPlaying(true);
-  const audio = new Audio(muz4);
-  audio.play()
-    .then(() => {
-      console.log('Гимн воспроизведен');
-    })
-    .catch((error) => {
-      console.error('Ошибка воспроизведения: ', error);
-    })
-    .finally(() => {
-      setNationalAnthemPlaying(false);
-    });
-};
   return (
     <div>
       {isNationalAnthemPlaying ? (
-        <p></p>
+        <p>Гимн воспроизводится...</p>
       ) : (
-        <p style={{
-          fontSize:"36px",
-          color:"white",
-          marginLeft:"1040px",
-          marginTop:"-550px",
-          position:"absolute",
-        
-        }}>...</p>
+        <div>
+          <p
+            style={{
+              fontSize: "36px",
+              color: "white",
+              marginLeft: "1040px",
+              marginTop: "-550px",
+              position: "absolute",
+            }}
+          >
+            ..
+          </p>
+        </div>
       )}
     </div>
   );

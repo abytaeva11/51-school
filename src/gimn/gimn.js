@@ -66,7 +66,7 @@ const Gimn = () => {
               position: "absolute",
             }}
           >
-            ...
+            ..
           </p>
         </div>
       )}

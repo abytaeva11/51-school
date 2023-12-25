@@ -72,8 +72,6 @@ import VideoBg from '../global/VideoBg';
               />
               {/*<div className="school-name">*/}
               {/*  <h3 className="school-name">Паяз атындагы <br/> №9   жалпы билим берүү мектеби</h3>*/}
-
-
             </div>
           </div>
         </div>

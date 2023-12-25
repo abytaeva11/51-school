@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useAppContext } from "../global/AppContext";
 import "../App.css";
-import muz1 from "../music/Мирбек Атабеков - Таласым.mp3";
-import muz2 from "../music/Асылбек Насирдинов - Улуу көч.mp3";
-import muz3 from "../music/кыргызский-оозкомуз_(muzmo.su).mp3";
-import muz4 from "../music/нурак-комузкууу_(muzmo.su).mp3";
-import muz5 from "../music/kyrgyzskaya-narodnaya-muzyka-esimde.mp3";
+import muz1 from "../music/au2 (5).mp3";
+import muz2 from "../music/AUD-20231219-WA0089.mp3";
+import muz3 from "../music/au4.mp3";
+import muz4 from "../music/au6.mp3";
+import muz5 from "../music/au7.mp3";
+import muz6 from "../music/jjj.mp3";
+
 import "../components/DefaultValue.css";
-import muz6 from "../music/kyrgyz_music_34.mp3";
-import muz7 from "../music/Детская - Учат В Школе.mp3";
+
 import "../components/DefaultValue.css";
 
 const daysOfWeek = [
@@ -134,8 +135,9 @@ function Monday({disableAudioDays, setDisableAudioDays}) {
             <option value={muz3}>Аудио 3</option>
             <option value={muz4}>Аудио 4</option>
             <option value={muz5}>Аудио 5</option>
-            <option value={muz6}>Аудио 6</option>
-            <option value={muz7}>Аудио 7</option>
+          <option value={muz6}>Аудио 6</option>
+
+         
           </select>
           <div className="ParentValue">
             <div className="defaultValue">
